@@ -45,10 +45,12 @@ public class Ejemplo01 {
                 + "Ingrese 3 para multiplicar");
         op = entrada.nextInt();
         
+         if (valor1 > 20 && valor2 > 20){
         switch(op){
             // Opcion 1 // si op es igual a 1; se realiza las instrucciones
             // 17.      resultado <-- valor1 + valor2
             // 18.   Fin
+            
             case 1:
                 resultado = valor1 + valor2;
                 break;
@@ -64,9 +66,13 @@ public class Ejemplo01 {
             default:
                 System.out.println("Operación incorrecta");
                 break;
-             
-        }
-        // Escribir "El resultado de la operación es :" + resultado
+        }     
+         // Escribir "El resultado de la operación es :" + resultado       
         System.out.printf("El resultado de la operación es : %d\n", resultado);
+        
+        } else { System.out.println("Valor fuera de rango");
+
+
     }
+}
 }

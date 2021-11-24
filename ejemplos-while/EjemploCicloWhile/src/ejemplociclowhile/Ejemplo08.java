@@ -41,7 +41,8 @@ public class Ejemplo08 {
             // proceso para salir del ciclo.
             System.out.println("Ingrese si(salir)");
             String temporal = entrada.nextLine();
-            if (temporal.equals("si")) {
+            if (temporal.equals("si") || temporal.equals("s")
+                    || temporal.equals("yes")) {
                 bandera = false;
             }
         }

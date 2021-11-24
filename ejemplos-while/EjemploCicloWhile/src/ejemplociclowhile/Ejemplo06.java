@@ -13,37 +13,40 @@ import java.util.Scanner;
  * @author reroes
  */
 public class Ejemplo06 {
+
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        
+
         Scanner entrada = new Scanner(System.in);
         entrada.useLocale(Locale.US);
 
         double suma_total = 0;
         double calificacion;
         boolean bandera = true;
-        
-        
+
         System.out.println("Ingrese las notas de los estudiantes de su materia");
-               // true 
-        while (bandera){
+        // true 
+        while (bandera) {
             System.out.println("Ingrese calificación");
             calificacion = entrada.nextDouble();
-            suma_total = suma_total + calificacion;
-                       
+            if (calificacion > 20) {
+                calificacion = 20;
+                suma_total = suma_total + calificacion;
+
+            }
             // proceso para salir del ciclo.
             System.out.println("Ingrese el valor -1 para salir del ciclo");
             int temporal = entrada.nextInt();
-                        
-            if(temporal==-1){
+
+            if (temporal == -1) {
                 bandera = false;
             }
         }
-        
+
         System.out.printf("Suma de calificaciones es %.2f\n", suma_total);
-        
+
     }
 }
